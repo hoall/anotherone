@@ -1,6 +1,7 @@
 package de.felixpaetow.anotherone.service;
 
 import com.fatsecret.platform.model.CompactFood;
+import com.fatsecret.platform.model.Food;
 import com.fatsecret.platform.services.FatsecretService;
 import com.fatsecret.platform.services.Response;
 import lombok.AllArgsConstructor;
@@ -19,5 +20,10 @@ public class FatsecretClient {
     public List<CompactFood> searchForFood(String food) {
         Response<CompactFood> compactFoodResponse = service.searchFoods(food);
         return compactFoodResponse.getResults();
+    }
+
+    public Food getFood(Long foodId) {
+        return service.getFood(foodId);
+
     }
 }
