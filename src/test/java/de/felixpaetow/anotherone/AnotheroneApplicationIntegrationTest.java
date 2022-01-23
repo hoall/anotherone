@@ -33,9 +33,6 @@ class AnotheroneApplicationIntegrationTest {
      */
     @Test
     void searchForPastaShouldReturnACompactFood() throws Exception {
-        String foodName = "foodName";
-        String foodNameParam = "pasta";
-
         mockMvc.perform(get("/consumer/search?foodName=pasta"))
                 .andDo(print())
                 .andExpect(status().isOk());
