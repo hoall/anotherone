@@ -143,3 +143,6 @@ gradle-app.setting
 **/build/
 
 # End of https://www.toptal.com/developers/gitignore/api/java,gradle,intellij+all
+
+## May contain production ready oauth keys and should be ignored
+src/main/resources/application.yaml
